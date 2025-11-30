@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>All Books</h3>
+<table class="table table-bordered">
+  <tr><th>Title</th><th>Author</th><th>ISBN</th><th>Available</th></tr>
+  {% for b in books %}
+  <tr>
+    <td>{{ b.title }}</td>
+    <td>{{ b.author }}</td>
+    <td>{{ b.isbn }}</td>
+    <td>{{ b.available_quantity }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
